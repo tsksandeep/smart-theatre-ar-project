@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+package subs;
+
+option go_package="subspb";
+
+message SubInitialCheckRequest {}
+
+message SubInitialCheckResponse {
+    bool isSet = 1;
+}
+
+message SubSetRequest {
+    float anchorPositionX = 1;
+    float anchorPositionY = 2;
+    float anchorPositionZ = 3;
+    float anchorRotationW = 4;
+    float anchorRotationX = 5;
+    float anchorRotationY = 6;
+    float anchorRotationZ = 7;
+}
+
+message SubSetResponse {
+    bool isSet = 1;
+}
+
+message SubGetRequest {}
+
+message SubGetResponse {
+    float anchorPositionX = 1;
+    float anchorPositionY = 2;
+    float anchorPositionZ = 3;
+    float anchorRotationW = 4;
+    float anchorRotationX = 5;
+    float anchorRotationY = 6;
+    float anchorRotationZ = 7;
+}
+
+message SubManyTimesRequest {
+    string ipAddr = 1;
+}
+
+message SubManyTimesResponse {
+    string result = 1;
+}
+
+service SubsService{
+    rpc SubManyTimes(SubManyTimesRequest) returns (stream SubManyTimesResponse) {};
+    rpc SubInitialCheck(SubInitialCheckRequest) returns (SubInitialCheckResponse);
+    rpc SubGet(SubGetRequest) returns (SubGetResponse);
+    rpc SubSet(SubSetRequest) returns (SubSetResponse);
+}
