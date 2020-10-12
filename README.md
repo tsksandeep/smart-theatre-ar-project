@@ -1,4 +1,4 @@
-# Subtitles Viewer Android Phone (Augmented Reality)
+# Subtitles Viewer (Augmented Reality)
 
 This project uses AR to show subtitles when a movie is played .
 
