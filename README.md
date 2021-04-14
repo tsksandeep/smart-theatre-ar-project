@@ -5,7 +5,7 @@ This project uses AR to show subtitles when a movie is played .
 ## Requirements
 
 * Go v1.13
-* GRPC (.Net  Framework v4.5)
+* GRPC
 * Unity Engine 2019
 
 ### Setup
