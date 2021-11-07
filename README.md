@@ -1,4 +1,4 @@
-# Subtitles Viewer (Augmented Reality)
+# Smart Theatre (Augmented Reality)
 
 This project uses AR to show subtitles when a movie is played .
 
